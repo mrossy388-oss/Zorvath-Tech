@@ -6,7 +6,11 @@
 
     <title>Terms &amp; Conditions | Zorvath Tech</title>
 
+    <meta name="description"
+          content="Terms and Conditions governing the use of Zorvath Tech services and application.">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +26,10 @@
             color: #111827;
             background: #f8fafc;
             line-height: 1.7;
+            overflow-x: hidden;
         }
+
+        /* ================= NAVBAR ================= */
 
         nav {
             width: 100%;
@@ -30,7 +37,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
@@ -55,21 +63,341 @@
             font-size: 15px;
         }
 
-        .hero {
-            padding: 75px 7%;
-            text-align: center;
-            background: linear-gradient(135deg, #f8fbff, #eef5ff);
+        .back-home:hover {
+            color: #1d4ed8;
         }
 
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 12px;
+        /* ================= HERO ================= */
+
+        .terms-hero {
+            min-height: 470px;
+            padding: 65px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37,99,235,0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8fbff,
+                    #eef5ff
+                );
+
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero p {
+        .hero-content {
+            max-width: 570px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .terms-hero h1 {
+            font-size: 50px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .terms-hero h1 span {
+            color: #2563eb;
+        }
+
+        .terms-hero p {
             color: #6b7280;
             font-size: 16px;
         }
+
+        /* ================= ADVANCED AGREEMENT GRAPHIC ================= */
+
+        .agreement-graphic {
+            width: 360px;
+            height: 350px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        /* Floating background circles */
+
+        .orbit {
+            position: absolute;
+            border: 1px solid rgba(37,99,235,0.18);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit.one {
+            width: 330px;
+            height: 330px;
+            animation: rotate 18s linear infinite;
+        }
+
+        .orbit.two {
+            width: 250px;
+            height: 250px;
+            animation: rotateReverse 13s linear infinite;
+        }
+
+        .orbit.three {
+            width: 180px;
+            height: 180px;
+            animation: rotate 9s linear infinite;
+        }
+
+        /* Main document */
+
+        .document {
+            position: absolute;
+            width: 155px;
+            height: 205px;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background: #ffffff;
+            border-radius: 14px;
+
+            border: 1px solid #dbeafe;
+
+            box-shadow:
+                0 25px 55px rgba(37,99,235,0.20);
+
+            padding: 24px 20px;
+
+            z-index: 10;
+
+            animation: documentFloat 4s ease-in-out infinite;
+        }
+
+        .document-top {
+            width: 45px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+
+        .document-line {
+            height: 7px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            margin-bottom: 11px;
+        }
+
+        .document-line.short {
+            width: 65%;
+        }
+
+        .document-line.blue {
+            width: 80%;
+            background: #bfdbfe;
+        }
+
+        /* Agreement check */
+
+        .agreement-check {
+            width: 58px;
+            height: 58px;
+
+            position: absolute;
+            right: -20px;
+            bottom: 20px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+            color: #ffffff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 27px;
+
+            box-shadow:
+                0 15px 35px rgba(37,99,235,0.30);
+
+            z-index: 20;
+
+            animation: checkFloat 3s ease-in-out infinite;
+        }
+
+        /* Floating labels */
+
+        .floating-label {
+            position: absolute;
+
+            padding: 10px 14px;
+
+            background: rgba(255,255,255,0.95);
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.07);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            color: #374151;
+
+            z-index: 30;
+        }
+
+        .floating-label strong {
+            display: block;
+            color: #2563eb;
+            font-size: 14px;
+        }
+
+        .label-one {
+            top: 15px;
+            right: 0;
+            animation: labelFloat 4s ease-in-out infinite;
+        }
+
+        .label-two {
+            bottom: 15px;
+            left: 0;
+            animation: labelFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+
+        }
+
+        @keyframes rotateReverse {
+
+            from {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+        }
+
+        @keyframes documentFloat {
+
+            0%, 100% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-50%, calc(-50% - 10px));
+            }
+
+        }
+
+        @keyframes checkFloat {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        @keyframes labelFloat {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        /* ================= HIGHLIGHTS ================= */
+
+        .terms-highlights {
+            max-width: 1050px;
+            margin: -35px auto 40px;
+            padding: 0 25px;
+
+            position: relative;
+            z-index: 50;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .highlight {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 22px;
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.05);
+
+            transition: 0.3s;
+        }
+
+        .highlight:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 18px 35px rgba(0,0,0,0.08);
+        }
+
+        .highlight-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .highlight h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        /* ================= CONTENT ================= */
 
         .container {
             max-width: 1050px;
@@ -80,9 +408,13 @@
         .terms-card {
             background: #ffffff;
             padding: 50px;
+
             border-radius: 18px;
+
             border: 1px solid #e5e7eb;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+
+            box-shadow:
+                0 12px 35px rgba(0,0,0,0.05);
         }
 
         .intro {
@@ -94,6 +426,7 @@
         .terms-card h2 {
             font-size: 24px;
             color: #111827;
+
             margin-top: 38px;
             margin-bottom: 14px;
         }
@@ -117,11 +450,21 @@
             text-decoration: none;
         }
 
+        .terms-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= COMPANY BOX ================= */
+
         .company-box {
             margin-top: 35px;
+
             padding: 28px;
+
             background: #eff6ff;
+
             border-left: 4px solid #2563eb;
+
             border-radius: 10px;
         }
 
@@ -129,11 +472,17 @@
             margin-top: 0;
         }
 
+        /* ================= FOOTER ================= */
+
         footer {
             padding: 35px 7%;
+
             background: #030712;
+
             color: #9ca3af;
+
             text-align: center;
+
             font-size: 14px;
         }
 
@@ -143,13 +492,45 @@
 
         .footer-links a {
             color: #d1d5db;
+
             text-decoration: none;
+
             margin: 0 10px;
+
+            transition: 0.3s;
         }
 
         .footer-links a:hover {
-            color: #ffffff;
+            color: #60a5fa;
         }
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 900px) {
+
+            .terms-hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 35px;
+                padding: 60px 5%;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .agreement-graphic {
+                width: 330px;
+                height: 330px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* ================= MOBILE ================= */
 
         @media (max-width: 700px) {
 
@@ -165,17 +546,69 @@
                 font-size: 13px;
             }
 
-            .hero {
-                padding: 55px 5%;
+            .terms-hero {
+                min-height: auto;
+                padding: 50px 5%;
             }
 
-            .hero h1 {
-                font-size: 34px;
+            .terms-hero h1 {
+                font-size: 36px;
+            }
+
+            .terms-hero p {
+                font-size: 15px;
+            }
+
+            .agreement-graphic {
+                width: 280px;
+                height: 280px;
+            }
+
+            .orbit.one {
+                width: 260px;
+                height: 260px;
+            }
+
+            .orbit.two {
+                width: 200px;
+                height: 200px;
+            }
+
+            .orbit.three {
+                width: 145px;
+                height: 145px;
+            }
+
+            .document {
+                width: 130px;
+                height: 175px;
+                padding: 20px 16px;
+            }
+
+            .agreement-check {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                right: -10px;
+            }
+
+            .floating-label {
+                padding: 8px 10px;
+                font-size: 9px;
+            }
+
+            .floating-label strong {
+                font-size: 12px;
             }
 
             .container {
                 padding: 0 15px;
                 margin: 30px auto;
+            }
+
+            .terms-highlights {
+                padding: 0 15px;
+                margin-top: 25px;
             }
 
             .terms-card {
@@ -191,11 +624,21 @@
             .terms-card li {
                 font-size: 15px;
             }
+
+            .footer-links {
+                line-height: 2.4;
+            }
+
         }
+
     </style>
+
 </head>
 
 <body>
+
+
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
@@ -209,19 +652,157 @@
 
     </nav>
 
-    <section class="hero">
 
-        <h1>Terms &amp; Conditions</h1>
+    <!-- ================= HERO ================= -->
 
-        <p>
-            Effective Date: 20 July 2026
-        </p>
+    <section class="terms-hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                📄 User Agreement &amp; Platform Rules
+            </div>
+
+            <h1>
+                Terms <span>&amp; Conditions</span>
+            </h1>
+
+            <p>
+                Please review the rules, responsibilities and conditions
+                governing the use of Zorvath Tech services.
+            </p>
+
+            <p style="margin-top:12px;">
+                <strong>Effective Date:</strong> 20 July 2026
+            </p>
+
+        </div>
+
+
+        <!-- ================= AGREEMENT GRAPHIC ================= -->
+
+        <div class="agreement-graphic">
+
+            <div class="orbit one"></div>
+
+            <div class="orbit two"></div>
+
+            <div class="orbit three"></div>
+
+
+            <div class="document">
+
+                <div class="document-top"></div>
+
+                <div class="document-line blue"></div>
+
+                <div class="document-line"></div>
+
+                <div class="document-line"></div>
+
+                <div class="document-line short"></div>
+
+                <div class="document-line blue"></div>
+
+                <div class="document-line"></div>
+
+                <div class="document-line short"></div>
+
+            </div>
+
+
+            <div class="agreement-check">
+                ✓
+            </div>
+
+
+            <div class="floating-label label-one">
+
+                <strong>AGREEMENT</strong>
+                Terms &amp; Rules
+
+            </div>
+
+
+            <div class="floating-label label-two">
+
+                <strong>RESPONSIBILITY</strong>
+                User &amp; Platform
+
+            </div>
+
+        </div>
 
     </section>
+
+
+    <!-- ================= HIGHLIGHTS ================= -->
+
+    <div class="terms-highlights">
+
+        <div class="highlight-grid">
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    📜
+                </div>
+
+                <h3>
+                    Clear Terms
+                </h3>
+
+                <p>
+                    Rules and conditions for using our platform.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    ⚖️
+                </div>
+
+                <h3>
+                    Fair Usage
+                </h3>
+
+                <p>
+                    Users and the platform have defined responsibilities.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Responsible Access
+                </h3>
+
+                <p>
+                    Secure and lawful use of Zorvath services is required.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TERMS CONTENT ================= -->
 
     <main class="container">
 
         <div class="terms-card">
+
 
             <p class="intro">
                 Please read these Terms and Conditions carefully before using
@@ -245,6 +826,7 @@
                 these Terms &amp; Conditions.
             </p>
 
+
             <h2>1. Company Information</h2>
 
             <p>
@@ -254,34 +836,77 @@
 
             <p>
                 <strong>Registered Office Address:</strong><br>
+
                 No. 544/15, Shop No. 1, L.K. Nagar,<br>
+
                 Polur Town, Tiruvannamalai District,<br>
+
                 Tamil Nadu – 606803, India
             </p>
+
 
             <h2>2. Eligibility</h2>
 
             <ul>
-                <li>Users must be at least 18 years old to use the application.</li>
-                <li>Users must provide accurate and complete information during registration.</li>
-                <li>Users are responsible for maintaining the security of their account information.</li>
+
+                <li>
+                    Users must be at least 18 years old to use the application.
+                </li>
+
+                <li>
+                    Users must provide accurate and complete information
+                    during registration.
+                </li>
+
+                <li>
+                    Users are responsible for maintaining the security
+                    of their account information.
+                </li>
+
             </ul>
+
 
             <h2>3. User Accounts</h2>
 
             <ul>
-                <li>Each user is allowed to maintain one active account.</li>
-                <li>Users are responsible for all activities performed through their account.</li>
-                <li>Providing false information or creating multiple accounts may result in account restrictions.</li>
+
+                <li>
+                    Each user is allowed to maintain one active account.
+                </li>
+
+                <li>
+                    Users are responsible for all activities performed
+                    through their account.
+                </li>
+
+                <li>
+                    Providing false information or creating multiple
+                    accounts may result in account restrictions.
+                </li>
+
             </ul>
+
 
             <h2>4. E-Commerce Services</h2>
 
             <ul>
-                <li>Zorvath Tech provides digital commerce services including product browsing, purchasing, and related platform features.</li>
-                <li>Products and services are subject to availability.</li>
-                <li>Product prices, offers, and availability may change based on company decisions.</li>
+
+                <li>
+                    Zorvath Tech provides digital commerce services including
+                    product browsing, purchasing, and related platform features.
+                </li>
+
+                <li>
+                    Products and services are subject to availability.
+                </li>
+
+                <li>
+                    Product prices, offers, and availability may change
+                    based on company decisions.
+                </li>
+
             </ul>
+
 
             <h2>5. Wallet System &amp; Earnings</h2>
 
@@ -296,6 +921,7 @@
                 registration, or adding members.
             </p>
 
+
             <h2>6. Direct Selling &amp; Commission Policy</h2>
 
             <p>
@@ -309,18 +935,38 @@
             </p>
 
             <p>
-                Users must refer to the Commission Policy for detailed level
-                structure, eligibility criteria, and calculation methods.
+                Users must refer to the
+                <a href="commission.html">
+                    Commission Policy
+                </a>
+                for detailed level structure, eligibility criteria,
+                and calculation methods.
             </p>
+
 
             <h2>7. Withdrawal &amp; KYC Verification</h2>
 
             <ul>
-                <li>KYC verification may be required for eligible withdrawals.</li>
-                <li>Users must provide accurate bank and payment details.</li>
-                <li>Withdrawal requests are subject to verification and applicable company policies.</li>
-                <li>Processing time may vary based on verification requirements.</li>
+
+                <li>
+                    KYC verification may be required for eligible withdrawals.
+                </li>
+
+                <li>
+                    Users must provide accurate bank and payment details.
+                </li>
+
+                <li>
+                    Withdrawal requests are subject to verification and
+                    applicable company policies.
+                </li>
+
+                <li>
+                    Processing time may vary based on verification requirements.
+                </li>
+
             </ul>
+
 
             <h2>8. Withdrawal Policy</h2>
 
@@ -331,6 +977,7 @@
                 verification and the company's applicable withdrawal policy.
             </p>
 
+
             <h2>9. Prohibited Activities</h2>
 
             <p>
@@ -338,20 +985,44 @@
             </p>
 
             <ul>
+
                 <li>Fake accounts</li>
+
                 <li>Fraudulent transactions</li>
+
                 <li>Misleading activities</li>
+
                 <li>Unauthorized automation or bots</li>
-                <li>Any activity that violates company policies or applicable laws</li>
+
+                <li>
+                    Any activity that violates company policies
+                    or applicable laws
+                </li>
+
             </ul>
+
 
             <h2>10. Product Returns &amp; Refunds</h2>
 
             <ul>
-                <li>Eligible products may be returned or refunded according to the applicable Return Policy.</li>
-                <li>Return requests are handled through available customer support channels.</li>
-                <li>Refund eligibility depends on product type, order status, and applicable policies.</li>
+
+                <li>
+                    Eligible products may be returned or refunded according
+                    to the applicable Return Policy.
+                </li>
+
+                <li>
+                    Return requests are handled through available
+                    customer support channels.
+                </li>
+
+                <li>
+                    Refund eligibility depends on product type, order status,
+                    and applicable policies.
+                </li>
+
             </ul>
+
 
             <h2>11. Intellectual Property</h2>
 
@@ -362,9 +1033,10 @@
             </p>
 
             <p>
-                Users may not copy, modify, distribute, or misuse company-owned
-                materials without permission.
+                Users may not copy, modify, distribute, or misuse
+                company-owned materials without permission.
             </p>
+
 
             <h2>12. Limitation of Liability</h2>
 
@@ -373,128 +1045,181 @@
             </p>
 
             <ul>
+
                 <li>Technical failures</li>
+
                 <li>Server issues</li>
+
                 <li>Payment gateway interruptions</li>
+
                 <li>Network problems</li>
+
                 <li>User negligence</li>
+
                 <li>Events beyond reasonable control</li>
+
             </ul>
+
 
             <h2>13. Privacy &amp; Data Protection</h2>
 
             <p>
                 User information is handled according to our
-                <a href="privacy.html">Privacy Policy</a>.
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>.
             </p>
 
             <p>
-                We take reasonable measures to protect user information and
-                use collected data only for providing and improving our services.
+                We take reasonable measures to protect user information
+                and use collected data only for providing and improving
+                our services.
             </p>
+
 
             <h2>14. Account Suspension &amp; Termination</h2>
 
             <p>
                 Zorvath Tech reserves the right to suspend or terminate
-                <h2>15. Compliance With Applicable Laws</h2>
+                accounts in cases involving fraudulent activity, violation
+                of these Terms &amp; Conditions, misuse of the platform,
+                or violation of applicable laws and company policies.
+            </p>
 
-<p>
-    Zorvath Tech Private Limited operates its services in
-    accordance with applicable laws and regulations of India.
-</p>
 
-<p>
-    Users are required to comply with applicable Indian laws while
-    using the platform, including consumer protection laws,
-    information technology regulations, digital payment regulations,
-    taxation requirements, and other applicable legal requirements.
-</p>
+            <h2>15. Compliance With Applicable Laws</h2>
 
-<p>
-    Zorvath Tech reserves the right to update its policies,
-    procedures, and services to maintain compliance with changes
-    in applicable laws and regulatory requirements.
-</p>
+            <p>
+                Zorvath Tech Private Limited operates its services in
+                accordance with applicable laws and regulations of India.
+            </p>
 
-<h2>16. Commission Policy Updates</h2>
+            <p>
+                Users are required to comply with applicable Indian laws
+                while using the platform, including consumer protection laws,
+                information technology regulations, digital payment
+                regulations, taxation requirements, and other applicable
+                legal requirements.
+            </p>
 
-<p>
-    Zorvath Tech reserves the right to modify, update, or revise
-    commission structures, eligibility requirements, business
-    policies, and related terms based on business requirements.
-</p>
+            <p>
+                Zorvath Tech reserves the right to update its policies,
+                procedures, and services to maintain compliance with changes
+                in applicable laws and regulatory requirements.
+            </p>
 
-<p>
-    Any updates will be communicated through updated policies or
-    appropriate communication channels.
-</p>
 
-<h2>17. Governing Law &amp; Jurisdiction</h2>
+            <h2>16. Commission Policy Updates</h2>
 
-<p>
-    These Terms &amp; Conditions shall be governed by the laws
-    of India.
-</p>
+            <p>
+                Zorvath Tech reserves the right to modify, update, or revise
+                commission structures, eligibility requirements, business
+                policies, and related terms based on business requirements.
+            </p>
 
-<p>
-    <strong>Jurisdiction:</strong> Tamil Nadu, India.
-</p>
+            <p>
+                Any updates will be communicated through updated policies
+                or appropriate communication channels.
+            </p>
 
-<div class="company-box">
 
-    <h2>18. Contact Information</h2>
+            <h2>17. Governing Law &amp; Jurisdiction</h2>
 
-    <p>
-        <strong>Zorvath Tech Private Limited</strong>
-    </p>
+            <p>
+                These Terms &amp; Conditions shall be governed by the laws
+                of India.
+            </p>
 
-    <p>
-        Website:
-        <a href="https://privacy.zorvathtech.in/" target="_blank">
-            privacy.zorvathtech.in
-        </a>
-    </p>
+            <p>
+                <strong>Jurisdiction:</strong>
+                Tamil Nadu, India.
+            </p>
 
-    <p>
-        Email:
-        <a href="mailto:zorvathtechprivatelimited@zorvathtech.in">
-            zorvathtechprivatelimited@zorvathtech.in
-        </a>
-    </p>
 
-    <p>
-        <strong>Registered Office Address:</strong><br>
-        No. 544/15, Shop No. 1, L.K. Nagar,<br>
-        Polur Town, Tiruvannamalai District,<br>
-        Tamil Nadu – 606803, India
-    </p>
+            <!-- ================= COMPANY BOX ================= -->
 
-</div>
+            <div class="company-box">
 
-</div>
+                <h2>18. Contact Information</h2>
 
-</main>
+                <p>
+                    <strong>
+                        Zorvath Tech Private Limited
+                    </strong>
+                </p>
 
-<footer>
+                <p>
+                    Website:
+                    <a
+                        href="https://privacy.zorvathtech.in/"
+                        target="_blank"
+                        rel="noopener">
+                        privacy.zorvathtech.in
+                    </a>
+                </p>
 
-    <p>
-         <p>
-        ©️ 2026 Zorvath Tech Private Limited. All Rights Reserved.
-    </p>
+                <p>
+                    Email:
+                    <a
+                        href="mailto:zorvathtechprivatelimited@zorvathtech.in">
+                        zorvathtechprivatelimited@zorvathtech.in
+                    </a>
+                </p>
 
-    <div class="footer-links">
+                <p>
+                    <strong>
+                        Registered Office Address:
+                    </strong>
+                    <br>
 
-        <a href="index.html">Home</a>
+                    No. 544/15, Shop No. 1, L.K. Nagar,
+                    <br>
 
-        <a href="privacy.html">Privacy Policy</a>
+                    Polur Town, Tiruvannamalai District,
+                    <br>
 
-        <a href="terms.html">Terms &amp; Conditions</a>
-        <a href="commission.html">Commission Policy</a>
+                    Tamil Nadu – 606803, India
+                </p>
 
-    </div>
+            </div>
 
-</footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            ©️ 2026 Zorvath Tech Private Limited.
+            All Rights Reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+            <a href="commission.html">
+                Commission Policy
+            </a>
+
+        </div>
+
+    </footer>
+
 
 </body>
 </html>
