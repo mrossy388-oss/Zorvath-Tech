@@ -6,7 +6,11 @@
 
     <title>Privacy Policy | Zorvath Tech</title>
 
+    <meta name="description"
+          content="Privacy Policy of Zorvath Tech Private Limited. Learn how Zorvath collects, uses and protects user information.">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +26,10 @@
             color: #111827;
             background: #f8fafc;
             line-height: 1.7;
+            overflow-x: hidden;
         }
+
+        /* ================= NAVBAR ================= */
 
         nav {
             width: 100%;
@@ -30,7 +37,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
@@ -55,21 +63,247 @@
             font-size: 15px;
         }
 
+        .back-home:hover {
+            color: #1d4ed8;
+        }
+
+        /* ================= HERO ================= */
+
         .policy-hero {
-            padding: 75px 7%;
-            text-align: center;
-            background: linear-gradient(135deg, #f8fbff, #eef5ff);
+            min-height: 430px;
+            padding: 70px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(37,99,235,0.10),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8fbff,
+                    #eef5ff
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
 
         .policy-hero h1 {
-            font-size: 48px;
-            margin-bottom: 12px;
+            font-size: 50px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .policy-hero h1 span {
+            color: #2563eb;
         }
 
         .policy-hero p {
             color: #6b7280;
             font-size: 16px;
         }
+
+        /* ================= PRIVACY GRAPHIC ================= */
+
+        .privacy-graphic {
+            width: 320px;
+            height: 320px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .privacy-ring {
+            position: absolute;
+            border: 1px solid rgba(37,99,235,0.20);
+            border-radius: 50%;
+            animation: rotate 15s linear infinite;
+        }
+
+        .ring-one {
+            width: 300px;
+            height: 300px;
+        }
+
+        .ring-two {
+            width: 230px;
+            height: 230px;
+            animation-duration: 10s;
+            animation-direction: reverse;
+        }
+
+        .ring-three {
+            width: 160px;
+            height: 160px;
+            animation-duration: 7s;
+        }
+
+        .shield {
+            width: 130px;
+            height: 150px;
+
+            background: linear-gradient(
+                145deg,
+                #2563eb,
+                #1e3a8a
+            );
+
+            clip-path: polygon(
+                50% 0%,
+                90% 15%,
+                90% 55%,
+                80% 75%,
+                50% 100%,
+                20% 75%,
+                10% 55%,
+                10% 15%
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 48px;
+
+            box-shadow:
+                0 25px 55px rgba(37,99,235,0.30);
+
+            position: relative;
+            z-index: 5;
+
+            animation: shieldFloat 4s ease-in-out infinite;
+        }
+
+        .security-card {
+            position: absolute;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.94);
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            font-size: 12px;
+            font-weight: 700;
+            color: #374151;
+            z-index: 10;
+        }
+
+        .security-card strong {
+            display: block;
+            color: #2563eb;
+            font-size: 15px;
+        }
+
+        .security-one {
+            top: 25px;
+            right: 0;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .security-two {
+            bottom: 25px;
+            left: 0;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        @keyframes shieldFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* ================= SECURITY HIGHLIGHTS ================= */
+
+        .security-highlights {
+            max-width: 1050px;
+            margin: -35px auto 40px;
+            padding: 0 25px;
+
+            position: relative;
+            z-index: 20;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .highlight {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 22px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .highlight-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .highlight h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        /* ================= CONTENT ================= */
 
         .container {
             max-width: 1050px;
@@ -100,6 +334,13 @@
 
         .policy-card h2:first-of-type {
             margin-top: 0;
+        }
+
+        .policy-card h3 {
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #1f2937;
         }
 
         .policy-card p {
@@ -137,6 +378,12 @@
             text-decoration: none;
         }
 
+        .company-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
+
         footer {
             padding: 35px 7%;
             background: #030712;
@@ -153,10 +400,51 @@
             color: #d1d5db;
             text-decoration: none;
             margin: 0 10px;
+            transition: 0.3s;
         }
 
         .footer-links a:hover {
-            color: #ffffff;
+            color: #60a5fa;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .policy-hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 35px;
+                padding: 60px 5%;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .privacy-graphic {
+                width: 300px;
+                height: 300px;
+            }
+
+            .ring-one {
+                width: 280px;
+                height: 280px;
+            }
+
+            .ring-two {
+                width: 215px;
+                height: 215px;
+            }
+
+            .ring-three {
+                width: 150px;
+                height: 150px;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 700px) {
@@ -170,16 +458,61 @@
             }
 
             .policy-hero {
-                padding: 55px 5%;
+                min-height: auto;
+                padding: 50px 5%;
             }
 
             .policy-hero h1 {
                 font-size: 36px;
             }
 
+            .policy-hero p {
+                font-size: 15px;
+            }
+
+            .privacy-graphic {
+                width: 270px;
+                height: 270px;
+            }
+
+            .ring-one {
+                width: 250px;
+                height: 250px;
+            }
+
+            .ring-two {
+                width: 195px;
+                height: 195px;
+            }
+
+            .ring-three {
+                width: 140px;
+                height: 140px;
+            }
+
+            .shield {
+                width: 110px;
+                height: 130px;
+                font-size: 40px;
+            }
+
+            .security-card {
+                padding: 8px 10px;
+                font-size: 10px;
+            }
+
+            .security-card strong {
+                font-size: 13px;
+            }
+
             .container {
                 padding: 0 15px;
                 margin: 30px auto;
+            }
+
+            .security-highlights {
+                padding: 0 15px;
+                margin-top: 25px;
             }
 
             .policy-card {
@@ -191,15 +524,29 @@
                 font-size: 21px;
             }
 
+            .policy-card h3 {
+                font-size: 17px;
+            }
+
             .policy-card p,
             .policy-card li {
                 font-size: 15px;
             }
+
+            .footer-links {
+                line-height: 2.4;
+            }
+
         }
+
     </style>
+
 </head>
 
 <body>
+
+
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
@@ -214,20 +561,132 @@
     </nav>
 
 
+    <!-- ================= PRIVACY HERO ================= -->
+
     <section class="policy-hero">
 
-        <h1>Privacy Policy</h1>
+        <div class="hero-content">
 
-        <p>
-            Effective Date: 20 July 2026
-        </p>
+            <div class="hero-badge">
+                🔐 Privacy &amp; Data Protection
+            </div>
+
+            <h1>
+                Privacy <span>Policy</span>
+            </h1>
+
+            <p>
+                We are committed to protecting your personal information
+                and maintaining transparency in how your data is handled.
+            </p>
+
+            <p style="margin-top:12px;">
+                <strong>Effective Date:</strong> 20 July 2026
+            </p>
+
+        </div>
+
+
+        <!-- PRIVACY GRAPHIC -->
+
+        <div class="privacy-graphic">
+
+            <div class="privacy-ring ring-one"></div>
+
+            <div class="privacy-ring ring-two"></div>
+
+            <div class="privacy-ring ring-three"></div>
+
+            <div class="shield">
+                🔒
+            </div>
+
+            <div class="security-card security-one">
+
+                <strong>SECURE</strong>
+                Data Protection
+
+            </div>
+
+            <div class="security-card security-two">
+
+                <strong>PRIVATE</strong>
+                User Information
+
+            </div>
+
+        </div>
 
     </section>
 
 
+    <!-- ================= HIGHLIGHTS ================= -->
+
+    <div class="security-highlights">
+
+        <div class="highlight-grid">
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Data Protection
+                </h3>
+
+                <p>
+                    Reasonable safeguards are used to protect information.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Secure Access
+                </h3>
+
+                <p>
+                    OTP-based authentication helps secure user accounts.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Transparency
+                </h3>
+
+                <p>
+                    We explain how information is collected and used.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= POLICY CONTENT ================= -->
+
     <main class="container">
 
         <div class="policy-card">
+
 
             <p class="intro">
                 Welcome to Zorvath, a mobile application owned and operated by
@@ -260,7 +719,9 @@
 
             <h2>2. Information We Collect</h2>
 
-            <p>Depending on the services you use, we may collect:</p>
+            <p>
+                Depending on the services you use, we may collect:
+            </p>
 
             <p><strong>Personal Information</strong></p>
 
@@ -301,7 +762,9 @@
 
             <h2>3. Purpose of Collecting Information</h2>
 
-            <p>Your information is collected for purposes including:</p>
+            <p>
+                Your information is collected for purposes including:
+            </p>
 
             <ul>
                 <li>Creating and managing your account</li>
@@ -309,11 +772,13 @@
                 <li>KYC verification</li>
                 <li>Processing product orders</li>
                 <li>Processing wallet withdrawals</li>
+
                 <li>
                     Commission-related record management and calculation of
                     eligible commissions based on product purchase and sales
                     activities according to applicable company policies and terms
                 </li>
+
                 <li>Customer support</li>
                 <li>Fraud prevention</li>
                 <li>Security monitoring</li>
@@ -337,7 +802,9 @@
                 withdrawals may require KYC verification.
             </p>
 
-            <p>The KYC information collected is used only for:</p>
+            <p>
+                The KYC information collected is used only for:
+            </p>
 
             <ul>
                 <li>Identity verification</li>
@@ -353,7 +820,9 @@
                 Payments are processed through Razorpay.
             </p>
 
-            <p>We do not store your:</p>
+            <p>
+                We do not store your:
+            </p>
 
             <ul>
                 <li>Debit Card PIN</li>
@@ -383,7 +852,9 @@
                 We do not sell, rent, or trade your personal information.
             </p>
 
-            <p>Information may be shared only:</p>
+            <p>
+                Information may be shared only:
+            </p>
 
             <ul>
                 <li>With payment partners to process transactions</li>
@@ -396,7 +867,9 @@
 
             <h2>9. Third-Party Services</h2>
 
-            <p>Our application currently uses:</p>
+            <p>
+                Our application currently uses:
+            </p>
 
             <ul>
                 <li>Razorpay — Payment Processing</li>
@@ -441,6 +914,7 @@
                 for cancellation.
             </p>
 
+
             <h3>Refund Policy</h3>
 
             <p>
@@ -459,6 +933,7 @@
                 provider and banking partner.
             </p>
 
+
             <h3>Return / Replacement</h3>
 
             <p>
@@ -471,6 +946,7 @@
                 Our team will review the request and provide a suitable
                 resolution as per company policy.
             </p>
+
 
             <h3>Contact Support</h3>
 
@@ -543,54 +1019,90 @@
             </p>
 
 
+            <!-- ================= COMPANY CONTACT ================= -->
+
             <div class="company-box">
 
                 <h2>16. Contact Us</h2>
+
                 <p>
-                    <strong>Zorvath Tech Private Limited</strong>
+                    <strong>
+                        Zorvath Tech Private Limited
+                    </strong>
                 </p>
 
                 <p>
                     Website:
-                    <a href="https://privacy.zorvathtech.in/" target="_blank">
+                    <a
+                        href="https://privacy.zorvathtech.in/"
+                        target="_blank"
+                        rel="noopener">
                         privacy.zorvathtech.in
                     </a>
                 </p>
 
                 <p>
                     Support Email:
-                    <a href="mailto:zorvathtechprivatelimited@zorvathtech.in">
+                    <a
+                        href="mailto:zorvathtechprivatelimited@zorvathtech.in">
                         zorvathtechprivatelimited@zorvathtech.in
                     </a>
                 </p>
 
                 <p>
-                    <strong>Registered Office Address:</strong><br>
-                    No. 544/15, Shop No. 1, L.K. Nagar,<br>
-                    Polur Town, Tiruvannamalai District,<br>
+                    <strong>
+                        Registered Office Address:
+                    </strong>
+                    <br>
+
+                    No. 544/15, Shop No. 1, L.K. Nagar,
+                    <br>
+
+                    Polur Town, Tiruvannamalai District,
+                    <br>
+
                     Tamil Nadu – 606803, India.
                 </p>
 
             </div>
 
+
         </div>
 
     </main>
 
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <p>
-            ©️ 2026 Zorvath Tech Private Limited. All Rights Reserved.
+            ©️ 2026 Zorvath Tech Private Limited.
+            All Rights Reserved.
         </p>
 
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms &amp; Conditions</a>
-            <a href="commission.html">Commission Policy</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+            <a href="commission.html">
+                Commission Policy
+            </a>
+
         </div>
 
     </footer>
+
 
 </body>
 </html>
